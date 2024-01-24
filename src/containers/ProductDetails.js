@@ -9,6 +9,8 @@ import {
 const ProductDetails = () => {
   const { productId } = useParams();
   let product = useSelector((state) => state.product);
+  // for selectedProduct we need to call the reducer, so we need to use useSelector
+
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
   const fetchProductDetail = async (id) => {
